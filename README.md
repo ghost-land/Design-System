@@ -1,4 +1,4 @@
-# Ghost eShop RETRO Design System
+# Ghost Land Design System
 
 ## 🎨 Color Palette
 
