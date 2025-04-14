@@ -202,6 +202,6 @@ decoding="async"
 - Flexible layouts
 
 ### Dark Mode
-- Already dark-themed by default
+- Already dark-themed by default (depend of project)
 - Use opacity for variations
 - Maintain contrast ratios
