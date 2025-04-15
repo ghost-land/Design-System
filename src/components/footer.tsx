@@ -1,6 +1,4 @@
-import { Mail, Github, Globe, Home, Heart } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Github, Globe, Home, Heart } from 'lucide-react';
 
 const currentYear = new Date().getFullYear();
 

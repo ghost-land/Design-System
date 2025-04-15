@@ -61,7 +61,7 @@ export function LoadingSection() {
               <Progress 
                 value={downloadProgress} 
                 className="h-2" 
-                indicatorClassName="bg-gradient-to-r from-orange-500 to-orange-600 transition-all"
+                indicatorClassName="bg-gradient-to-r from-orange-500 to-orange-600 transition-all duration-300"
               />
             </div>
             <Button 
@@ -88,7 +88,7 @@ export function LoadingSection() {
                 <Progress 
                   value={uploadProgress} 
                   className="h-2"
-                  indicatorClassName="bg-gradient-to-r from-orange-500 to-orange-600 transition-all"
+                  indicatorClassName="bg-gradient-to-r from-orange-500 to-orange-600 transition-all duration-300"
                 />
                 {uploadProgress > 0 && uploadProgress < 100 && (
                   <div className="absolute inset-0 bg-orange-500/10 animate-pulse rounded-full" />
