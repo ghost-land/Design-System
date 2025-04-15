@@ -1,5 +1,27 @@
 # Ghost Land Design System
 
+## 🌟 Features
+
+### Theme Switching
+- System-based dark/light mode detection
+- Manual theme toggle with smooth transitions
+- Persistent theme preference
+
+### Language Selection
+- Dropdown-based language switcher
+- Support for multiple locales
+- Emoji flag indicators
+
+### Interactive Elements
+- Animated icon buttons with hover effects
+- Loading states with smooth transitions
+- Success/completion animations
+
+### Search Components
+- Command palette (⌘K) support
+- Advanced filtering options
+- Mobile-optimized search interface
+
 ## 🎨 Color Palette
 
 ### Primary Colors
@@ -72,6 +94,17 @@
 ### Transitions
 - Standard: `transition-all duration-300`
 - Smooth: `transition-all duration-500`
+- Loading: `animate-spin`
+- Fade: `animate-fade-in`, `animate-fade-up`
+- Pulse: `animate-pulse`
+- Custom:
+  ```css
+  @keyframes diceRoll {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+  ```
 
 ### Hover Effects
 - Scale: `hover:scale-105`, `hover:scale-110`
@@ -177,7 +210,10 @@ decoding="async"
 ### Forms
 - Consistent input styling
 - Clear focus states
-- Error and success states
+- Loading states with spinners
+- Success confirmation animations
+- Tabbed form interfaces
+- Icon-enhanced input fields
 
 ### Modals
 - Backdrop blur
@@ -205,3 +241,48 @@ decoding="async"
 - Already dark-themed by default (depend of project)
 - Use opacity for variations
 - Maintain contrast ratios
+- System preference detection
+- Manual override option
+
+## 🔄 State Management
+
+### Loading States
+```tsx
+const [isLoading, setIsLoading] = useState(false);
+
+// Usage in buttons
+<Button disabled={isLoading}>
+  {isLoading ? <Loader2 className="animate-spin" /> : "Submit"}
+</Button>
+```
+
+### Progress Indicators
+- Linear progress bars with gradients
+- Circular loading spinners
+- Pulse animations
+- Download/Upload progress tracking
+
+### Charts & Analytics
+- Line charts with multiple datasets
+- Area charts with gradient fills
+- Bar charts with rounded corners
+- Radar charts for comparison
+- Responsive containers
+- Dark mode optimized colors
+- Custom tooltips and legends
+
+### Form States
+```tsx
+const [submitted, setSubmitted] = useState(false);
+// Success message handling
+{submitted && <p className="text-green-500">Success!</p>}
+```
+
+### Animation States
+```tsx
+const [isAnimating, setIsAnimating] = useState(false);
+// Trigger animations
+<div className={isAnimating ? "animate-bounce" : ""}>
+  Content
+</div>
+```
